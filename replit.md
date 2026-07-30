@@ -32,4 +32,4 @@ An engineering audit (`attached_assets/Pasted-Blaze-Studio-v0-1-Engineering-Audi
 
 ## User preferences
 
-_None recorded yet._
+- Focus on backend work only (APIs, server, database, integrations, infrastructure). Design, copy, and content decisions are handled by the product manager — do not suggest wording or visual changes.
