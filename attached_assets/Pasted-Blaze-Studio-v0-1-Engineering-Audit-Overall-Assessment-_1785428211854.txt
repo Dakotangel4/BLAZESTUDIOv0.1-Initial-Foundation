@@ -1,0 +1,274 @@
+Blaze Studio v0.1 – Engineering Audit
+Overall Assessment
+
+Current score: 7.8/10
+
+The project is a solid proof of concept with good branding direction, but it isn't yet production-ready. The main gaps are architecture, responsiveness, accessibility, asset management, and performance optimization.
+
+1. Project Structure — 7/10
+Current
+index.html
+styles.css
+branding.css
+hero.css
+audit.css
+script.js
+assets/
+
+This works for a prototype, but it won't scale well.
+
+Recommended
+/
+assets/
+    images/
+    icons/
+    logos/
+    illustrations/
+css/
+    base.css
+    layout.css
+    components.css
+    utilities.css
+js/
+    main.js
+    animations.js
+    navigation.js
+index.html
+robots.txt
+sitemap.xml
+manifest.json
+Issues
+Multiple CSS files with unclear responsibilities.
+No modular JavaScript.
+Assets are mixed together.
+No separation between global styles and component styles.
+2. UI Audit — 8/10
+Good
+Premium color palette.
+Clean spacing.
+Modern look.
+Glassmorphism.
+Blue branding.
+Needs work
+Hero
+
+The hero should sell software products, not AI.
+
+Current direction:
+
+Robot
+↓
+AI
+↓
+Automation
+
+Preferred direction:
+
+Website mockup
+↓
+
+Dashboard
+↓
+
+Mobile App
+↓
+
+Cloud
+
+↓
+
+AI
+
+AI should support the story—not dominate it.
+
+Services
+
+Currently every service feels visually similar.
+
+Each card should have its own illustration.
+
+Examples:
+
+Website Development
+
+→ Browser + laptop
+
+Mobile Apps
+
+→ Phone UI
+
+UI/UX
+
+→ Figma canvas
+
+Digital Marketing
+
+→ Analytics
+
+Blockchain
+
+→ Crypto network
+
+AI Automation
+
+→ Robotic hand
+
+3. Responsive Audit — 6.5/10
+
+Needs checking on:
+
+320px
+375px
+390px
+414px
+768px
+1024px
+1440px
+
+Common issues to verify:
+
+Overflow
+Hero height
+Card wrapping
+Large headings
+Navigation collapse
+Footer spacing
+4. Branding Audit — 6/10
+
+This is currently the weakest area.
+
+Issues already identified:
+
+Logo recreated instead of using the official asset.
+"Studio" typography distorted.
+White background visible around logo.
+Robot imagery overused.
+Some illustrations don't follow one design language.
+
+Recommendation:
+
+Treat the logo as a protected asset.
+
+Never regenerate it.
+
+5. Images & Assets — 6/10
+
+Audit every image for:
+
+Proper cropping.
+Transparent backgrounds.
+Consistent shadows.
+No halos.
+Correct aspect ratio.
+Retina quality.
+SVG where possible.
+6. CSS Architecture — 6/10
+
+Potential issues:
+
+Duplicate rules.
+Hard-coded spacing.
+Repeated colors.
+Repeated border radii.
+Repeated shadows.
+
+Recommendation:
+
+Introduce CSS variables:
+
+:root {
+  --primary: #1E6BFF;
+  --secondary: #0B1220;
+  --accent: #4CC9F0;
+
+  --radius: 18px;
+  --shadow: 0 20px 50px rgba(30,107,255,.15);
+}
+7. JavaScript — 7/10
+
+Likely too much logic in one file.
+
+Split into:
+
+navigation.js
+animations.js
+forms.js
+utils.js
+main.js
+8. Performance — 6.5/10
+
+Needs:
+
+Image optimization.
+Lazy loading.
+SVG optimization.
+CSS minification.
+JS minification.
+Font preloading.
+9. Accessibility — 5.5/10
+
+Needs verification:
+
+Alt text.
+ARIA labels.
+Keyboard navigation.
+Focus states.
+Heading hierarchy.
+Color contrast.
+10. SEO — 5/10
+
+Add:
+
+Open Graph.
+Twitter Cards.
+Canonical URL.
+Sitemap.
+Robots.txt.
+Structured Data (Organization, Local Business, Website).
+Meta description.
+Keywords.
+Favicon variants.
+11. Security — 7/10
+
+When adding forms:
+
+Server-side validation.
+Rate limiting.
+Honeypot.
+Sanitization.
+Environment variables for secrets.
+12. Maintainability — 6/10
+
+The project is approaching the point where componentization will save a lot of effort.
+
+Priority Roadmap
+Phase 1 (Highest)
+Fix logo usage.
+Audit imagery.
+Improve responsive layout.
+Remove AI overuse.
+Phase 2
+Improve CSS architecture.
+Modularize JavaScript.
+Optimize assets.
+Phase 3
+Contact form.
+SEO.
+Accessibility.
+Performance tuning.
+Phase 4
+Convert to React/Vite while preserving the visual design.
+Add reusable components.
+Production Readiness
+Category	Score
+Branding	6/10
+UI Design	8/10
+Responsiveness	6.5/10
+Performance	6.5/10
+Accessibility	5.5/10
+SEO	5/10
+Code Quality	7/10
+Maintainability	6/10
+Overall	7.8/10
+
+Recommendation: Before adding new features, use Replit to address the engineering items (structure, responsiveness, performance, accessibility, SEO). Once those are solid, use Codex later to refine illustrations, logo presentation, and other visual assets. That sequence will give you a cleaner, more maintainable foundation without disrupting the design direction.
