@@ -1,7 +1,7 @@
 /* responsive.css
    Mobile-first responsive improvements for Blaze Studio
-   Breakpoints: 320 · 375 · 390 · 540 · 768 · 850 · 1024 · 1440
-   ─────────────────────────────────────────────────────────────
+   Breakpoints: 320 · 360 · 375 · 390 · 414 · 540 · 768 · 850 · 1024 · 1440
+   ───────────────────────────────────────────────────────────────────────────
    Covers: overflow, spacing, typography, navigation, buttons,
    section layouts, hero, features, process, footer, about page.
    No colour, branding, or content changes.
@@ -118,6 +118,9 @@ header.nav {
   /* ── Social links: minimum 44px tap target on touch devices ── */
   .footer-social-col .social-row { min-height: 44px; }
 
+  /* ── Testimonials: 2-column at tablet (3-col is too cramped at 768px) ── */
+  .quotes { grid-template-columns: repeat(2, 1fr); }
+
   /* ── AI section: hide right visual on narrow tablet ── */
   .ai-visual { min-height: 220px; overflow: hidden; }
 
@@ -181,6 +184,25 @@ header.nav {
 
   /* ── Footer: soften column layout ── */
   .footer-bottom { gap: 8px; }
+}
+
+/* ═══════════════════════════════════════════════════════
+   ≤ 414px — common Android phones (Pixel 6/7, Galaxy S)
+   Bridges the gap between @540px (2-col) and @390px (1-col)
+   for feature cards and timeline steps.
+═══════════════════════════════════════════════════════ */
+@media (max-width: 414px) {
+  /* Feature grid: 2-col at 382px is workable but @390px already
+     drops to 1-col — extend that threshold up to 414px so the
+     391–414px range doesn't snap back to a cramped 2-col layout. */
+  .feature-grid { grid-template-columns: 1fr; }
+
+  /* Process timeline: same rationale as feature-grid above. */
+  .timeline {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .timeline::before { display: none; }
 }
 
 /* ═══════════════════════════════════════════════════════
