@@ -112,6 +112,12 @@ header.nav {
   .process h2 { font-size: clamp(30px, 5.5vw, 44px); }
   .ai-content h2 { font-size: clamp(32px, 5.5vw, 46px); }
 
+  /* ── Nav dropdown: sit flush below the 88px nav bar ── */
+  .nav nav { top: 88px; }
+
+  /* ── Social links: minimum 44px tap target on touch devices ── */
+  .footer-social-col .social-row { min-height: 44px; }
+
   /* ── AI section: hide right visual on narrow tablet ── */
   .ai-visual { min-height: 220px; overflow: hidden; }
 
@@ -163,6 +169,9 @@ header.nav {
   /* styles.css already switches to display:block at 540px;
      extend with better button alignment */
   .cta .button { display: inline-flex; }
+
+  /* ── Work caption: wrap title + button on narrow phones ── */
+  .work-caption { flex-wrap: wrap; gap: 16px; }
 
   /* ── Testimonials: no min-height (let content breathe) ── */
   .quotes article { min-height: auto; }
@@ -288,6 +297,9 @@ header.nav {
   /* ── Testimonials ── */
   .quotes blockquote { font-size: 12px; }
   .quotes article { padding: 16px 12px; }
+
+  /* ── Nav dropdown: match reduced 72px nav height ── */
+  .nav nav { top: 72px; }
 
   /* ── Nav ── */
   .nav { height: 72px; }
