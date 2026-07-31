@@ -22,6 +22,20 @@ export function initNavigation() {
     });
   });
 
+  // Close menu when clicking outside the nav or menu button
+  document.addEventListener('click', (e) => {
+    if (
+      nav.classList.contains('open') &&
+      !nav.contains(e.target) &&
+      e.target !== menuButton &&
+      !menuButton.contains(e.target)
+    ) {
+      nav.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', 'Open navigation menu');
+    }
+  });
+
   // Close menu on Escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && nav.classList.contains('open')) {
