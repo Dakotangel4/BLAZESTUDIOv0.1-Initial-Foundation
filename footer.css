@@ -1,7 +1,7 @@
 /* footer.css — site-wide footer */
 .site-footer{border-top:1px solid #e7edf7;background:#fff;margin-top:80px}
 .footer-top{display:grid;grid-template-columns:1.5fr 1fr 1.3fr 1.1fr 1fr;gap:40px;padding:64px 0 52px}
-.footer-brand .brand-logo{height:32px;margin-bottom:16px;display:block}
+.footer-brand .brand-logo{height:32px;width:auto;margin-bottom:16px;display:block}
 .footer-brand p{font-size:12px;color:#6d7890;line-height:1.65;max-width:220px;margin:0}
 .footer-col h4{font-family:Sora,sans-serif;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#17213a;margin:0 0 18px}
 .footer-col a{display:block;font-size:12px;color:#536078;text-decoration:none;margin-bottom:10px;line-height:1.5}
