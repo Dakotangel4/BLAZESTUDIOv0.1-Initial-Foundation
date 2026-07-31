@@ -115,6 +115,9 @@ header.nav {
   /* ── AI section: hide right visual on narrow tablet ── */
   .ai-visual { min-height: 220px; overflow: hidden; }
 
+  /* ── Testimonials: 2-column on tablet (3-col default → 1-col at ≤540px via styles.css) ── */
+  .quotes { grid-template-columns: repeat(2, 1fr); }
+
   /* ── Showcase: scale for tablet ── */
   .showcase { height: 380px; }
 }
@@ -172,6 +175,24 @@ header.nav {
 
   /* ── Footer: soften column layout ── */
   .footer-bottom { gap: 8px; }
+}
+
+/* ═══════════════════════════════════════════════════════
+   391px – 414px — larger Android flagships (Galaxy S21+, Pixel 6)
+   Feature grid and timeline must stay 1-column in this gap;
+   styles.css sets feature-grid to 2-col at ≤540px which would
+   otherwise re-apply here before the ≤390px rule kicks in.
+═══════════════════════════════════════════════════════ */
+@media (min-width: 391px) and (max-width: 414px) {
+  /* ── Features: keep 1-column ── */
+  .feature-grid { grid-template-columns: 1fr; }
+
+  /* ── Process timeline: keep 1-column ── */
+  .timeline {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .timeline::before { display: none; }
 }
 
 /* ═══════════════════════════════════════════════════════
