@@ -3,26 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Blaze Studio builds premium websites, apps, AI-powered solutions and digital experiences." />
-    <meta name="keywords" content="web development, mobile apps, UI/UX design, AI automation, digital marketing, blockchain, web agency Nigeria, Blaze Studio" />
+    <meta name="description" content="Blaze Studio is a premium digital agency in Nigeria building high-performance websites, mobile apps, AI automation, and digital experiences that help ambitious businesses grow." />
+    <meta name="keywords" content="web development, mobile apps, UI/UX design, AI automation, digital marketing, web agency Nigeria, Blaze Studio, Delta State" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://www.blazestudio.com.ng" />
+    <link rel="canonical" href="https://www.blazestudio.com.ng/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_NG" />
     <meta property="og:title" content="Blaze Studio — Build. Design. Automate." />
-    <meta property="og:description" content="Blaze Studio builds premium websites, apps, AI-powered solutions and digital experiences." />
-    <meta property="og:url" content="https://www.blazestudio.com.ng" />
+    <meta property="og:description" content="Blaze Studio is a premium digital agency in Nigeria building high-performance websites, mobile apps, AI automation, and digital experiences that help ambitious businesses grow." />
+    <meta property="og:url" content="https://www.blazestudio.com.ng/" />
     <meta property="og:site_name" content="Blaze Studio" />
     <meta property="og:image" content="https://www.blazestudio.com.ng/assets/blaze-studio-og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Blaze Studio — Premium Digital Agency" />
 
-    <!-- Twitter Card -->
+    <!-- Twitter / X Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Blaze Studio — Build. Design. Automate." />
-    <meta name="twitter:description" content="Blaze Studio builds premium websites, apps, AI-powered solutions and digital experiences." />
+    <meta name="twitter:description" content="Blaze Studio is a premium digital agency in Nigeria building high-performance websites, mobile apps, AI automation, and digital experiences that help ambitious businesses grow." />
     <meta name="twitter:image" content="https://www.blazestudio.com.ng/assets/blaze-studio-og.png" />
+    <meta name="twitter:image:alt" content="Blaze Studio — Premium Digital Agency" />
 
     <title>Blaze Studio — Build. Design. Automate.</title>
     <link rel="icon" type="image/png" href="assets/blaze-studio-favicon.png" />
@@ -40,19 +43,49 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Blaze Studio",
-      "url": "https://www.blazestudio.com.ng",
-      "logo": "https://www.blazestudio.com.ng/assets/blaze-studio-horizontal.png",
-      "description": "Blaze Studio builds premium websites, apps, AI-powered solutions and digital experiences.",
-      "telephone": "+2349130986279",
-      "email": "hello@blazestudio.com.ng",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+2349130986279",
-        "contactType": "customer service",
-        "email": "hello@blazestudio.com.ng"
-      }
+      "@graph": [
+        {
+          "@type": ["Organization", "LocalBusiness"],
+          "@id": "https://www.blazestudio.com.ng/#organization",
+          "name": "Blaze Studio",
+          "url": "https://www.blazestudio.com.ng/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.blazestudio.com.ng/assets/blaze-studio-horizontal.png",
+            "width": 530,
+            "height": 170
+          },
+          "image": "https://www.blazestudio.com.ng/assets/blaze-studio-og.png",
+          "description": "Premium digital agency in Nigeria building high-performance websites, mobile apps, AI automation, and digital experiences for ambitious businesses.",
+          "telephone": "+2349130986279",
+          "email": "hello@blazestudio.com.ng",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "J&F Plaza, Opp. Otokutu Market, Otokutu",
+            "addressLocality": "Warri",
+            "addressRegion": "Delta State",
+            "addressCountry": "NG"
+          },
+          "areaServed": ["Nigeria", "Africa"],
+          "openingHours": "Mo-Fr 09:00-18:00",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+2349130986279",
+            "contactType": "customer service",
+            "email": "hello@blazestudio.com.ng",
+            "availableLanguage": "English"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.blazestudio.com.ng/#website",
+          "url": "https://www.blazestudio.com.ng/",
+          "name": "Blaze Studio",
+          "publisher": {
+            "@id": "https://www.blazestudio.com.ng/#organization"
+          }
+        }
+      ]
     }
     </script>
   </head>
