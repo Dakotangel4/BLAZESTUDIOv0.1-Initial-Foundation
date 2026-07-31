@@ -1,0 +1,123 @@
+Git Workflow & Repository Organization
+
+This project is now under active development and will be worked on by multiple AI coding assistants (Replit, Codex, ChatGPT, etc.).
+
+I want GitHub to become the single source of truth.
+
+Objectives
+
+Reorganize the Git workflow to follow professional software development practices.
+
+Branch Strategy
+
+Keep main as the stable production branch.
+
+Create the following feature branches:
+
+feature/homepage-polish
+feature/about-page
+feature/contact-form
+feature/footer-redesign
+feature/seo
+feature/performance
+feature/mobile-optimization
+
+Do not merge them yet.
+
+Explain which branch should be used for each future task.
+
+Development Rules
+
+From now on:
+
+Never work directly on main.
+Every new feature must start from its own feature branch.
+Commit changes in small logical commits.
+Push feature branches to GitHub after each completed milestone.
+Merge into main only after the feature has been tested.
+Repository Cleanup
+
+Audit the repository and ensure:
+
+No unnecessary generated files are tracked.
+.gitignore is correct.
+Assets are organized.
+CSS is organized.
+JavaScript is organized.
+Branding assets remain untouched.
+Documentation
+
+Create:
+
+README.md
+
+Include:
+
+Project overview
+Technology stack
+Installation
+Running locally
+Git workflow
+Branch strategy
+Deployment
+Project structure
+CONTRIBUTING.md
+
+Include:
+
+Branch naming convention
+Commit message convention
+Pull request process
+Coding standards
+Asset management rules
+Brand guidelines
+Review checklist
+CHANGELOG.md
+
+Initialize a changelog beginning with:
+
+v0.1 Initial Foundation
+
+Document the work already completed.
+
+Commit Convention
+
+Adopt Conventional Commits.
+
+Examples:
+
+feat: add About page
+
+fix: correct logo asset
+
+style: improve footer spacing
+
+refactor: reorganize CSS files
+
+perf: optimize image loading
+
+docs: update README
+
+chore: clean repository
+Deliverables
+
+When complete, provide:
+
+Branches created.
+Repository structure.
+Files created.
+Files modified.
+Git workflow summary.
+Recommended next feature branch.
+
+Do not redesign the website. This task is only for repository organization and engineering workflow.
+
+One adjustment I'd make
+
+Rather than creating all of the feature branches immediately, I'd only create them when work actually starts. For example:
+
+Start feature/about-page when you're ready to build the About page.
+Merge it into main after testing.
+Then create feature/footer-redesign for the footer work.
+
+That keeps your repository cleaner and makes it easier to see what work is active versus planned. The naming convention can still be documented now, but the branches themselves can be created as neede

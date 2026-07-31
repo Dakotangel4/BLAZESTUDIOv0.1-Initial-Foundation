@@ -1,0 +1,1 @@
+- [Blaze Studio Development Workflow](blaze-studio-workflow.md) — mandatory branch→audit→implement→commit→PR cycle; never work on main, never auto-merge.

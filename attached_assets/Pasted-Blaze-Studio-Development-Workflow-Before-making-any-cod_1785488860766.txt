@@ -1,0 +1,130 @@
+Blaze Studio Development Workflow
+
+Before making any code changes, follow this workflow exactly.
+
+1. Sync Repository
+
+Pull the latest changes from GitHub and verify the working tree is clean.
+
+Do not overwrite existing work.
+
+2. Create a Feature Branch
+
+Never work directly on main.
+
+Create a new branch using this naming convention:
+
+feature/<feature-name>
+
+Examples:
+
+feature/homepage-refinement
+feature/about-page
+feature/footer-redesign
+feature/contact-form
+feature/mobile-optimization
+feature/performance
+feature/seo
+feature/animations
+3. Audit First
+
+Before writing code:
+
+inspect the current implementation
+identify issues
+explain your implementation plan
+identify files that will change
+wait for my approval if the change is significant
+4. Development Rules
+
+Maintain the existing Blaze Studio visual identity.
+
+Do NOT:
+
+redesign pages
+replace branding
+regenerate logos
+change typography
+modify brand colors
+rewrite marketing copy unless requested
+
+Improve only the requested feature.
+
+5. Commit Frequently
+
+Create logical commits.
+
+Example:
+
+git commit -m "Refine footer layout"
+
+git commit -m "Add About page"
+
+git commit -m "Improve mobile responsiveness"
+
+git commit -m "Optimize hero animations"
+
+Never make one massive commit.
+
+6. Push Changes
+
+Push only the feature branch.
+
+Do not merge into main.
+
+Example:
+
+git push origin feature/footer-redesign
+7. Pull Request
+
+When finished:
+
+Provide:
+
+summary of work
+files modified
+screenshots
+known issues
+recommendations
+
+Then prepare the branch for merge into main.
+
+Do NOT merge automatically.
+
+8. Coding Standards
+Clean HTML
+Modular CSS
+Reusable JavaScript
+Responsive
+Accessible
+SEO-friendly
+Performance optimized
+
+Avoid duplicate code.
+
+9. Project Goal
+
+Build Blaze Studio into a premium software company website inspired by:
+
+Apple
+Stripe
+Vercel
+Framer
+Microsoft
+
+The experience should communicate trust, innovation, and premium quality.
+
+Our Workflow Going Forward
+
+Every task will follow this cycle:
+
+Create a feature branch
+Audit the affected code
+Implement one feature only
+Test on desktop, tablet, and mobile
+Commit with a clear message
+Push the feature branch
+Review together
+Merge into main only after approval
+
+This keeps main stable while allowing you to experiment safely. If a feature doesn't work out, you can simply delete the feature branch without risking the production version of the Blaze Studio website.

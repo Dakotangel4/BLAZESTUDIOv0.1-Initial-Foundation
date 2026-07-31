@@ -34,3 +34,19 @@ An engineering audit (`attached_assets/Pasted-Blaze-Studio-v0-1-Engineering-Audi
 ## User preferences
 
 - Focus on backend work only (APIs, server, database, integrations, infrastructure). Design, copy, and content decisions are handled by the product manager — do not suggest wording or visual changes.
+
+## Development Workflow
+
+Every task must follow this cycle — no exceptions:
+
+1. **Sync** — pull latest from GitHub, verify clean working tree
+2. **Branch** — create `feature/<feature-name>` branch; never work on `main`
+3. **Audit first** — inspect current implementation, identify issues, explain plan, list files that will change; wait for approval on significant changes
+4. **Implement** — one feature only; maintain existing visual identity (no redesigns, no logo changes, no typography/color changes, no copy rewrites unless requested)
+5. **Commit frequently** — logical commits with clear messages (e.g. `git commit -m "Refine footer layout"`)
+6. **Push** — push feature branch only; do not merge into main
+7. **PR** — provide summary, files modified, screenshots, known issues, recommendations; do NOT merge automatically
+
+Coding standards: clean HTML · modular CSS · reusable JS · responsive · accessible · SEO-friendly · performance-optimized · no duplicate code.
+
+Project goal: premium software company website inspired by Apple, Stripe, Vercel, Framer, Microsoft — communicating trust, innovation, and premium quality.
