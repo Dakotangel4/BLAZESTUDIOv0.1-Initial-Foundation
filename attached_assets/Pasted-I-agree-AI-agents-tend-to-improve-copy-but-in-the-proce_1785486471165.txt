@@ -1,0 +1,71 @@
+I agree. AI agents tend to "improve" copy, but in the process they often dilute the brand voice. Since Blaze Studio is positioning itself as a premium software company, we should lock down the hero section ourselves so every future agent keeps it unchanged.
+
+Here's the hero copy I'd use as the canonical version.
+
+## Hero Badge
+
+**🚀 Premium Digital Solutions**
+
+## Main Headline
+
+# **Build. Design. Automate.**
+
+## Supporting Headline
+
+**Premium websites, mobile apps, AI solutions, and digital experiences engineered to help ambitious businesses scale faster.**
+
+## Description
+
+Blaze Studio partners with startups, SMEs, and enterprise teams to design beautiful interfaces, build high-performance software, automate business workflows with AI, and deliver digital products that create measurable business growth.
+
+## Primary CTA
+
+**Start Your Project**
+
+## Secondary CTA
+
+**Explore Our Services**
+
+---
+
+## Trust Metrics
+
+**50+**
+Projects Delivered
+
+**99%**
+Client Satisfaction
+
+**24/7**
+Dedicated Support
+
+**AI-Powered**
+Modern Solutions
+
+---
+
+## Right Side Visual
+
+Instead of a robotic hand, the hero should feature:
+
+* Premium MacBook showing a modern dashboard
+* Floating iPhone displaying a custom mobile app
+* Analytics cards
+* Website mockups
+* Cloud infrastructure icons
+* AI workflow nodes
+* Blue holographic UI
+* Glassmorphism panels
+* Soft blue ambient glow
+
+No robots.
+
+The robotic hand should appear **only** in the dedicated **AI Automation** section.
+
+---
+
+## Replit Prompt
+
+> Restore the Hero section using the following copy exactly. Do not rewrite, shorten, paraphrase, or replace any text. Preserve capitalization, punctuation, spacing, and button labels exactly as provided. Keep the existing premium Apple/Stripe/Vercel-inspired layout, animations, and responsiveness. Do not introduce robotic hands or AI characters into the hero. The hero visual should consist of premium website mockups, mobile app mockups, floating analytics dashboards, cloud infrastructure elements, holographic UI panels, and subtle blue gradients. Reserve all robotic-hand imagery exclusively for the "Work Smarter With AI" section. Treat this hero copy as the canonical brand messaging for Blaze Studio and do not modify it in future updates.
+
+From now on, I'd recommend we establish a **Brand Copy Bible** for Blaze Studio. That way, whether we're using Replit, Codex, or any other AI coding agent, the core messaging stays consistent and doesn't drift over time.
