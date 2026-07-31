@@ -7,6 +7,12 @@ export function initNavigation() {
   const nav = document.querySelector('#primary-nav');
   if (!menuButton || !nav) return;
 
+  const closeNavigation = () => {
+    nav.classList.remove('open');
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.setAttribute('aria-label', 'Open navigation menu');
+  };
+
   menuButton.addEventListener('click', () => {
     const isOpen = nav.classList.toggle('open');
     menuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
@@ -16,19 +22,25 @@ export function initNavigation() {
   // Close menu when a nav link is clicked (mobile UX)
   nav.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
-      nav.classList.remove('open');
-      menuButton.setAttribute('aria-expanded', 'false');
-      menuButton.setAttribute('aria-label', 'Open navigation menu');
+      closeNavigation();
     });
   });
 
-  // Close menu on Escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && nav.classList.contains('open')) {
-      nav.classList.remove('open');
-      menuButton.setAttribute('aria-expanded', 'false');
-      menuButton.setAttribute('aria-label', 'Open navigation menu');
+      closeNavigation();
       menuButton.focus();
     }
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!nav.classList.contains('open') || nav.contains(event.target) || menuButton.contains(event.target)) return;
+
+    closeNavigation();
+  });
+
+  const desktopViewport = window.matchMedia('(min-width: 851px)');
+  desktopViewport.addEventListener('change', (event) => {
+    if (event.matches) closeNavigation();
   });
 }
