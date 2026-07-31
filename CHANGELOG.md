@@ -9,6 +9,13 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Fixed
+- Mobile navigation now closes when visitors click outside it or return to a desktop viewport.
+- Scroll-reveal content remains visible when IntersectionObserver is unavailable.
+
+### Accessibility
+- Motion-sensitive visitors can use the site without animations or smooth scrolling.
+
 ---
 
 ## [0.1.1] — 2026-07-31
