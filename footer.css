@@ -1,0 +1,21 @@
+/* footer.css — site-wide footer */
+.site-footer{border-top:1px solid #e7edf7;background:#fff;margin-top:80px}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1.3fr 1.1fr 1fr;gap:40px;padding:64px 0 52px}
+.footer-brand .brand-logo{height:32px;margin-bottom:16px;display:block}
+.footer-brand p{font-size:12px;color:#6d7890;line-height:1.65;max-width:220px;margin:0}
+.footer-col h4{font-family:Sora,sans-serif;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#17213a;margin:0 0 18px}
+.footer-col a{display:block;font-size:12px;color:#536078;text-decoration:none;margin-bottom:10px;line-height:1.5}
+.footer-col a:hover{color:#1e6bff}
+.footer-contact-col .fc-name{font-family:Sora,sans-serif;font-size:13px;font-weight:700;color:#17213a;margin:0 0 8px}
+.footer-contact-col p{font-size:12px;color:#536078;margin:0 0 9px;line-height:1.6}
+.footer-contact-col a{display:inline;font-size:12px;color:#536078;text-decoration:none}
+.footer-contact-col a:hover{color:#1e6bff}
+.footer-social-col .social-row{display:flex;align-items:center;gap:9px;font-size:12px;color:#536078;text-decoration:none;margin-bottom:11px;transition:.2s}
+.footer-social-col .social-row:hover{color:#1e6bff}
+.footer-social-col .social-row svg{flex-shrink:0}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding:20px 0;border-top:1px solid #e7edf7;gap:20px;flex-wrap:wrap}
+.footer-bottom>p{font-size:10px;color:#8a96a9;margin:0}
+.footer-tagline{font-family:Sora,sans-serif;font-weight:700;font-size:11px!important;color:#17213a!important;letter-spacing:.04em}
+@media(max-width:1024px){.footer-top{grid-template-columns:1fr 1fr 1fr;gap:32px}.footer-brand{grid-column:1/-1}}
+@media(max-width:850px){.footer-top{grid-template-columns:1fr 1fr;gap:28px}.footer-bottom{justify-content:center;text-align:center}}
+@media(max-width:540px){.footer-top{grid-template-columns:1fr;gap:24px}}

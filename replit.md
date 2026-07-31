@@ -5,9 +5,10 @@ A static marketing website for Blaze Studio — a web agency offering websites, 
 ## Stack
 
 - Pure HTML, CSS, and JavaScript — no build step, no framework, no dependencies
-- Multiple CSS files: `styles.css`, `hero.css`, `branding.css`, `audit.css`
-- Single JS file: `script.js`
+- CSS files: `styles.css`, `hero.css`, `branding.css`, `audit.css`, `footer.css`, `about.css`
+- JS entry point: `js/main.js` (modules: `js/navigation.js`, `js/animations.js`)
 - SVG and PNG assets in `assets/`
+- Pages: `index.html` (home), `about.html` (About page)
 
 ## How to run
 

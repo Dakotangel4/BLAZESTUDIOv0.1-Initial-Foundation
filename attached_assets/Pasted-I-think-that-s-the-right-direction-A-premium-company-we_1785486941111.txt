@@ -1,0 +1,172 @@
+I think that's the right direction. A premium company website shouldn't try to cram everything into the footer. The footer should act as a navigation hub, while the **About** page tells your story and contains your office information.
+
+Here's the structure I'd recommend.
+
+---
+
+# Footer
+
+## Company
+
+* About Blaze Studio
+* Our Services
+* Portfolio
+* Contact Us
+
+## Services
+
+* Website Development
+* Mobile App Development
+* UI/UX Design
+* Graphic Design
+* Digital Marketing
+* AI Automation
+* Crypto Buy & Sell
+
+## Resources
+
+* Blog *(Coming Soon)*
+* FAQs
+* Privacy Policy
+* Terms of Service
+
+## Contact
+
+📍 Office Address
+*(Your office address here)*
+
+📞 +234 913 098 6279
+
+✉ [hello@blazestudio.com.ng](mailto:hello@blazestudio.com.ng)
+
+🌐 [www.blazestudio.com.ng](http://www.blazestudio.com.ng)
+
+---
+
+### Bottom Bar
+
+© 2026 Blaze Studio. All rights reserved.
+
+Built. Design. Automate.
+
+Social Icons
+
+* Facebook
+* Instagram
+* LinkedIn
+* X (Twitter)
+* WhatsApp
+* GitHub
+
+---
+
+# About Page
+
+This is where the office address belongs.
+
+## Hero
+
+# About Blaze Studio
+
+Building premium digital experiences that help businesses innovate, grow, and lead in the digital economy.
+
+---
+
+## Our Story
+
+Explain:
+
+* Why Blaze Studio was created
+* What problems you solve
+* Your mission
+* Your vision
+* Your values
+
+---
+
+## What We Do
+
+A beautiful card grid covering:
+
+* Website Development
+* Mobile Apps
+* UI/UX
+* Graphic Design
+* AI Automation
+* Digital Marketing
+* Crypto Buy & Sell
+
+---
+
+## Our Process
+
+Discovery
+
+↓
+
+Strategy
+
+↓
+
+Design
+
+↓
+
+Development
+
+↓
+
+Launch
+
+↓
+
+Support
+
+---
+
+## Why Businesses Choose Blaze Studio
+
+* Premium Quality
+* Transparent Communication
+* Fast Delivery
+* Mobile-first Development
+* Secure Solutions
+* Long-term Support
+
+---
+
+## Office
+
+This should feel like a corporate office section.
+
+### Visit Us
+
+**Blaze Studio**
+
+📍 Office Address
+
+*(Insert your physical office address)*
+
+📞 +234 913 098 6279
+
+✉ [hello@blazestudio.com.ng](mailto:hello@blazestudio.com.ng)
+
+🕒 Business Hours
+
+Monday – Friday
+
+9:00 AM – 6:00 PM
+
+You can also embed a Google Map here once you have a permanent office location.
+
+---
+
+## CTA
+
+Ready to Build Something Amazing?
+
+Start Your Project
+
+---
+
+I also recommend adding a **"Why Blaze Studio"** page later. Most agencies stop at an About page, but a dedicated page explaining *why clients should choose you*—with your workflow, technologies, quality standards, and commitment to long-term partnerships—can make Blaze Studio stand out and help convert more visitors into clients.
