@@ -1,52 +1,43 @@
 # Blaze Studio
 
-A static marketing website for Blaze Studio — a web agency offering websites, apps, AI-powered solutions, and digital experiences.
+Premium digital agency website for Blaze Studio — a static HTML/CSS/vanilla JS site with no build step or dependencies.
 
-## Stack
-
-- Pure HTML, CSS, and JavaScript — no build step, no framework, no dependencies
-- CSS files: `styles.css`, `hero.css`, `branding.css`, `audit.css`, `footer.css`, `about.css`
-- JS entry point: `js/main.js` (modules: `js/navigation.js`, `js/animations.js`)
-- SVG and PNG assets in `assets/`
-- Pages: `index.html` (home), `about.html` (About page)
+**Live site:** [www.blazestudio.com.ng](https://www.blazestudio.com.ng)
 
 ## How to run
 
-Serve the root directory as a static site. Any static file server works:
-
-```bash
-npx serve .
-# or
+```
 python3 -m http.server 5000
 ```
 
-## Project notes
+The workflow "Start application" is configured to do this automatically.
 
-An engineering audit (`attached_assets/Pasted-Blaze-Studio-v0-1-Engineering-Audit-Overall-Assessment-_1785428098573.txt`) has been completed and scores the project at **7.8/10**. Key improvement areas identified:
+## Stack
 
-- Branding & logo usage (6/10)
-- Responsiveness (6.5/10)
-- CSS architecture — duplicate rules, missing CSS variables (6/10)
-- SEO — missing OG tags, sitemap, robots.txt (5/10)
-- Accessibility — alt text, ARIA, keyboard nav (5.5/10)
-- Performance — unoptimized images, no lazy loading (6.5/10)
+- HTML5, CSS3 (modular files), Vanilla JS (ES modules)
+- Google Fonts: Sora (headings), Poppins (body)
+- No frameworks, no build tools, no package manager
+
+## Project structure
+
+```
+index.html          # Homepage
+about.html          # About page
+styles.css          # Global styles
+hero.css            # Hero section
+branding.css        # Brand styles
+audit.css           # Audit-driven improvements
+footer.css          # Footer
+about.css           # About page styles
+js/
+  main.js           # ES module entry
+  animations.js     # Scroll reveal
+assets/             # Logos, images, SVGs
+```
 
 ## User preferences
 
-- Focus on backend work only (APIs, server, database, integrations, infrastructure). Design, copy, and content decisions are handled by the product manager — do not suggest wording or visual changes.
-
-## Development Workflow
-
-Every task must follow this cycle — no exceptions:
-
-1. **Sync** — pull latest from GitHub, verify clean working tree
-2. **Branch** — create `feature/<feature-name>` branch; never work on `main`
-3. **Audit first** — inspect current implementation, identify issues, explain plan, list files that will change; wait for approval on significant changes
-4. **Implement** — one feature only; maintain existing visual identity (no redesigns, no logo changes, no typography/color changes, no copy rewrites unless requested)
-5. **Commit frequently** — logical commits with clear messages (e.g. `git commit -m "Refine footer layout"`)
-6. **Push** — push feature branch only; do not merge into main
-7. **PR** — provide summary, files modified, screenshots, known issues, recommendations; do NOT merge automatically
-
-Coding standards: clean HTML · modular CSS · reusable JS · responsive · accessible · SEO-friendly · performance-optimized · no duplicate code.
-
-Project goal: premium software company website inspired by Apple, Stripe, Vercel, Framer, Microsoft — communicating trust, innovation, and premium quality.
+- Do not modify the Blaze Studio logo, colors, or typography
+- Do not rewrite marketing copy unless explicitly instructed
+- Follow the git workflow: branch → implement → PR (never commit directly to main)
+- Use Conventional Commits (`feat:`, `fix:`, `style:`, etc.)
