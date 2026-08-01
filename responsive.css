@@ -123,6 +123,16 @@ header.nav {
    ≤ 768px — portrait tablet
 ═══════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
+  /* ROOT CAUSE FIX — horizontal overflow
+     .glow-one has right:-160px; width:640px which places its right edge
+     exactly 160px past the viewport on every mobile/tablet size.
+     Fix: flush the right edge to the viewport boundary and cap width
+     so it never extends outside the document.  Do NOT use overflow-x:hidden. */
+  .glow-one {
+    right: 0;               /* was -160px — eliminates the 160px right bleed */
+    width: min(500px, 100%); /* never wider than the viewport */
+  }
+
   /* Reduce section vertical padding */
   .section,
   .work,

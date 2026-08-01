@@ -1,0 +1,631 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   mobile.css — Blaze Studio  ·  Mobile-first UX redesign
+   Landing page (index.html) only. Desktop layouts are untouched.
+   Breakpoints: 540 · 414 · 390 · 375 · 360 · 320 px
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ────────────────────────────────────────────────────────────────────────────
+   ≤ 540 px  —  all phone viewports
+   ──────────────────────────────────────────────────────────────────────────── */
+@media (max-width: 540px) {
+
+  /* ── SHELL ──────────────────────────────────────────────────────────────── */
+  .shell { width: min(100% - 28px, 1160px); }
+
+  /* ── NAV ────────────────────────────────────────────────────────────────── */
+  .nav { height: 66px; }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     HERO SECTION
+     Mobile-first: concise text → full-width CTAs → card stats → compact illustration
+  ══════════════════════════════════════════════════════════════════════════ */
+  .hero {
+    gap: 0;
+    padding-top: 20px;
+    padding-bottom: 0;
+    min-height: auto;
+  }
+
+  /* Headline — bold and tight */
+  .hero h1 {
+    max-width: 100%;
+    font-size: clamp(36px, 10.5vw, 52px);
+    line-height: 1.05;
+    letter-spacing: -0.082em;
+    margin-bottom: 0;
+  }
+
+  /* Eyebrow */
+  .hero-kicker { margin-bottom: 10px; font-size: 10px; }
+
+  /* Lead — full width, concise */
+  .lead {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.65;
+    margin: 14px 0 0;
+  }
+
+  /* hero-desc repeats the lead concept at length — hide on mobile
+     to keep the hero tight and action-focused */
+  .hero-desc { display: none; }
+
+  /* ── CTA BUTTONS — full-width, stacked ─────────────────────────────────── */
+  .hero-copy .actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+    margin-top: 22px;
+  }
+  .hero-copy .button {
+    width: 100%;
+    justify-content: center;
+    padding: 15px 20px;
+    white-space: normal;
+    font-size: 13.5px;
+  }
+
+  /* ── STATS — card-grid with dividers ───────────────────────────────────── */
+  /* Override responsive.css justify-items:start for phones */
+  .hero-proof {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-top: 22px;
+    width: 100%;
+    background: #f8fafc;
+    border: 1px solid #e7edf7;
+    border-radius: 14px;
+    overflow: hidden;
+    justify-items: center;
+  }
+  .hero-proof > div {
+    padding: 14px 8px;
+    text-align: center;
+  }
+  /* Remove borders that responsive.css adds then we re-add our own */
+  .hero-proof > div + div  { border-left: none; padding-left: 8px; }
+  .hero-proof > div:nth-child(3),
+  .hero-proof > div:nth-child(4) { padding-top: 14px; }
+
+  /* Grid dividers */
+  .hero-proof > div:nth-child(odd)  { border-right: 1px solid #e7edf7; }
+  .hero-proof > div:nth-child(1),
+  .hero-proof > div:nth-child(2)    { border-bottom: 1px solid #e7edf7; }
+
+  .hero-proof strong { font-size: 17px; letter-spacing: -0.04em; display: block; }
+  .hero-proof span   { font-size: 9px; color: #8090a8; }
+
+  /* ── HERO STAGE — compact 240px showcase window ─────────────────────────── */
+  /* hero.css sets scale(.93) + height:445px at this breakpoint;
+     we override to a tighter window that clips to just the most impactful panels */
+  .hero-stage {
+    height: 240px;
+    scale: 1;                  /* remove the extra outer scale; position elements directly */
+    margin-top: 16px;
+    margin-bottom: 0;
+    border-radius: 18px;
+  }
+
+  /* Analytics panel — anchor to top-right */
+  .hero-stage .analytics {
+    right: 10px;
+    top: 14px;
+    scale: 0.72;
+    transform-origin: top right;
+  }
+
+  /* Workflow panel — anchor to top-left */
+  .hero-stage .workflow-panel {
+    left: 8px;
+    top: 14px;
+    scale: 0.68;
+    transform-origin: top left;
+  }
+
+  /* Cloud panel — bottom-left (raise into view) */
+  .hero-stage .cloud-panel {
+    left: 8px;
+    bottom: 12px;
+    scale: 0.75;
+    transform-origin: bottom left;
+  }
+
+  /* Phone sits at top:172px — completely below 240px clipped area → hidden by overflow */
+  /* Product canvas is wide and distorts in compact view → hide */
+  .product-canvas { display: none; }
+
+  /* Orbits: reposition for the narrower, shorter stage */
+  .stage-orbit.orbit-one { width: 300px; height: 300px; left: 20%; top: -10%; }
+  .stage-orbit.orbit-two { width: 220px; height: 220px; left: 28%; top: -4%; }
+
+  /* Labels: smaller, reposition */
+  .label-top    { top: 10px; left: 12px; font-size: 7px; }
+  .label-bottom { bottom: 10px; right: 12px; font-size: 7px; }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     LOGO STRIP — horizontal scroll, no wrapping
+  ══════════════════════════════════════════════════════════════════════════ */
+  .logo-strip {
+    min-height: 56px;
+    padding: 0 0 0 4px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 24px;
+    justify-content: flex-start;
+  }
+  .logo-strip::-webkit-scrollbar { display: none; }
+  .logo-strip span { flex-shrink: 0; white-space: nowrap; display: none; } /* hide the label text */
+  .logo-strip div  { flex-shrink: 0; white-space: nowrap; font-size: 15px; }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     SERVICES — horizontal card layout (icon left, content right)
+     Replaces the tall vertical card with a compact, scannable list item
+  ══════════════════════════════════════════════════════════════════════════ */
+  .section { padding: 60px 0; }
+  .section-heading { max-width: 100%; }
+  .section-heading h2,
+  .features h2,
+  .process h2 { font-size: clamp(26px, 8vw, 36px); }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 28px;
+  }
+
+  .service-card {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    grid-template-rows: auto auto auto;
+    column-gap: 14px;
+    min-height: auto;
+    padding: 16px;
+    align-items: start;
+    position: relative;
+  }
+
+  .service-icon {
+    grid-column: 1;
+    grid-row: 1 / 4;
+    margin-bottom: 0;
+    align-self: start;
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+
+  .service-card h3 {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 13.5px;
+    margin: 0;
+    align-self: center;
+  }
+
+  .service-card p {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 11px;
+    margin: 6px 0 0;
+    max-width: 100%;
+  }
+
+  .service-card > a {                  /* "Explore service" link */
+    grid-column: 2;
+    grid-row: 3;
+    position: static;                  /* override the absolute positioning */
+    margin-top: 10px;
+    font-size: 10px;
+  }
+
+  .card-orb { display: none; }         /* hide decorative blob */
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     FEATURES GRID
+  ══════════════════════════════════════════════════════════════════════════ */
+  .features {
+    padding: 0 0 60px;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9px;
+  }
+
+  .feature-grid article {
+    padding: 16px 14px;
+    min-height: auto;
+    border-radius: 12px;
+  }
+
+  .feature-grid b  { font-size: 16px; }
+  .feature-grid h3 { font-size: 11.5px; margin-top: 11px; }
+  .feature-grid p  { font-size: 9px; }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     AI SECTION
+     On mobile, the abstract orbital visual doesn't communicate value.
+     Hide it and let the content breathe full-width.
+  ══════════════════════════════════════════════════════════════════════════ */
+  .ai-section {
+    grid-template-columns: 1fr;
+    padding: 40px 22px 36px;
+    min-height: auto;
+    border-radius: 20px;
+    gap: 0;
+  }
+
+  .ai-visual { display: none; }       /* abstract dots → no value on small screens */
+
+  .ai-content { width: 100%; }
+
+  .ai-content h2 {
+    font-size: clamp(28px, 8.5vw, 38px);
+    line-height: 1.1;
+  }
+
+  .ai-content > p:not(.eyebrow) {
+    font-size: 13.5px;
+    line-height: 1.68;
+    margin: 14px 0;
+    opacity: 0.82;
+    max-width: 100%;
+  }
+
+  .ai-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+    margin: 14px 0 22px;
+  }
+
+  .ai-list span { font-size: 10.5px; }
+
+  .ai-section .button {
+    width: 100%;
+    justify-content: center;
+    padding: 15px 20px;
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     WORK / PORTFOLIO
+  ══════════════════════════════════════════════════════════════════════════ */
+  .work { padding: 60px 0; }
+
+  .showcase {
+    height: 260px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 28px;
+    border-radius: 16px;
+  }
+
+  .laptop { left: 12%; width: 70%; top: 32px; }
+  .screen { height: 160px; border-width: 5px; }
+  .screen-nav { height: 26px; padding: 6px 10px; font-size: 7px; }
+  .screen-copy { left: 14px; top: 44px; font-size: 18px; }
+  .screen-shape { width: 160px; height: 160px; right: 10px; bottom: -55px; }
+
+  /* Hide tablet/phone decorations at smallest sizes — they overlap */
+  .tablet,
+  .project-phone { display: none; }
+
+  .work-caption {
+    display: block;
+    margin: 16px 0 0;
+  }
+  .work-caption div { margin-bottom: 12px; }
+  .work-caption p   { font-size: 10px; margin-bottom: 2px; }
+  .work-caption h3  { font-size: 16px; }
+  .round-link {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     PROCESS — vertical single-column timeline
+     Grid layout: step-number column (39px) | text column (1fr)
+  ══════════════════════════════════════════════════════════════════════════ */
+  .process { padding: 20px 0 60px; }
+  .process h2 { margin-bottom: 32px; }
+
+  .timeline {
+    grid-template-columns: 1fr;   /* always 1-col on phones */
+    gap: 0;
+    position: relative;
+  }
+
+  .timeline::before { display: none; } /* hide the horizontal desktop rule */
+
+  /* Each step: step-circle pinned left, h3 + p stacked right */
+  .timeline article {
+    display: grid;
+    grid-template-columns: 39px 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 16px;
+    row-gap: 4px;
+    padding-bottom: 28px;
+    position: relative;    /* needed for the ::after connector line */
+  }
+
+  /* Vertical connector drawn from bottom of the step-circle to end of article */
+  .timeline article:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 19px;            /* centre of the 39px circle */
+    top: 39px;             /* just below the circle */
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, #cfe0f9, #e5edf7);
+    z-index: 0;
+  }
+
+  .timeline b {
+    grid-column: 1;
+    grid-row: 1 / 3;        /* span both text rows */
+    margin-bottom: 0;
+    align-self: start;
+    position: relative;
+    z-index: 1;
+    background: white;
+    width: 39px;
+    height: 39px;
+  }
+
+  .timeline h3 {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 13px;
+    margin: 6px 0 0;
+  }
+  .timeline p {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 10px;
+    line-height: 1.55;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     TESTIMONIALS
+  ══════════════════════════════════════════════════════════════════════════ */
+  .testimonials { padding: 60px 0 68px; }
+
+  .quotes {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 28px;
+  }
+
+  .quotes article {
+    padding: 20px 18px;
+    min-height: auto;
+    border-radius: 14px;
+  }
+
+  .stars { font-size: 12px; letter-spacing: 2px; }
+
+  .quotes blockquote {
+    font-size: 13.5px;
+    line-height: 1.58;
+    margin: 14px 0 auto;
+  }
+
+  .quotes footer { margin-top: 16px; gap: 10px; }
+  .quotes footer b,
+  .quotes footer span { font-size: 10px; }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     CTA SECTION
+  ══════════════════════════════════════════════════════════════════════════ */
+  .cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 22px;
+    border-radius: 18px;
+    gap: 22px;
+  }
+
+  .cta > div { width: 100%; }
+
+  .cta h2 {
+    font-size: clamp(26px, 7.5vw, 34px);
+    margin: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta .eyebrow.light { margin-bottom: 10px; }
+
+  .cta .button {
+    display: flex;
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+    padding: 15px 20px;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+  }
+
+  .cta-ring {
+    width: 300px;
+    height: 300px;
+    right: -60px;
+    top: -60px;
+    border-width: 40px;
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     FOOTER — compact, clean mobile layout
+  ══════════════════════════════════════════════════════════════════════════ */
+  .site-footer { margin-top: 48px; }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+    padding: 16px 0;
+  }
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   ≤ 414 px  —  standard phones (iPhone 14 / Pixel 7 range)
+   ──────────────────────────────────────────────────────────────────────────── */
+@media (max-width: 414px) {
+
+  .hero h1 { font-size: clamp(34px, 9.5vw, 44px); }
+
+  .hero-stage { height: 224px; }
+
+  .section, .work  { padding: 54px 0; }
+  .testimonials    { padding: 54px 0 62px; }
+  .features        { padding: 0 0 54px; }
+  .process         { padding: 14px 0 54px; }
+
+  .ai-section      { padding: 36px 20px 30px; }
+  .ai-content h2   { font-size: clamp(26px, 8vw, 34px); }
+
+  .cta             { padding: 36px 20px; }
+  .cta h2          { font-size: clamp(24px, 7.5vw, 30px); }
+
+  .service-card    { padding: 14px; column-gap: 12px; }
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   ≤ 390 px  —  iPhone 14 Pro / Pixel 7
+   ──────────────────────────────────────────────────────────────────────────── */
+@media (max-width: 390px) {
+
+  .shell { width: min(100% - 24px, 1160px); }
+
+  .hero h1 { font-size: clamp(32px, 9vw, 40px); }
+
+  .hero-stage {
+    height: 210px;
+    margin-top: 14px;
+  }
+
+  /* Analytics panel: tighter */
+  .hero-stage .analytics   { scale: 0.65; }
+  .hero-stage .workflow-panel { scale: 0.62; }
+  .hero-stage .cloud-panel { scale: 0.68; bottom: 10px; }
+
+  .section, .work  { padding: 50px 0; }
+  .testimonials    { padding: 50px 0 58px; }
+  .features        { padding: 0 0 50px; }
+  .process         { padding: 12px 0 50px; }
+
+  .ai-content h2   { font-size: clamp(24px, 8vw, 32px); }
+  .ai-section      { padding: 32px 18px 26px; }
+
+  .service-card    { padding: 13px 12px; }
+  .service-icon    { width: 36px; height: 36px; font-size: 17px; }
+
+  .showcase        { height: 240px; }
+  .screen          { height: 146px; }
+  .screen-copy     { font-size: 16px; top: 38px; }
+
+  .cta             { padding: 34px 18px; }
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   ≤ 375 px  —  iPhone SE 3 / Galaxy A series
+   ──────────────────────────────────────────────────────────────────────────── */
+@media (max-width: 375px) {
+
+  .hero h1 { font-size: 30px; }
+
+  .hero-stage       { height: 196px; margin-top: 12px; }
+  .hero-stage .analytics    { scale: 0.60; right: 8px; top: 10px; }
+  .hero-stage .workflow-panel { scale: 0.58; left: 6px; top: 10px; }
+  .hero-stage .cloud-panel  { scale: 0.63; bottom: 8px; }
+
+  .hero-proof strong { font-size: 15px; }
+
+  .section, .work  { padding: 46px 0; }
+  .testimonials    { padding: 46px 0 54px; }
+  .features        { padding: 0 0 46px; }
+  .process         { padding: 10px 0 46px; }
+
+  .section-heading h2,
+  .features h2,
+  .process h2      { font-size: 24px; }
+  .ai-content h2   { font-size: 26px; }
+  .cta h2          { font-size: 24px; }
+
+  .showcase        { height: 224px; }
+  .screen          { height: 136px; }
+  .screen-copy     { font-size: 15px; top: 34px; left: 12px; }
+
+  .services-grid   { gap: 8px; }
+  .service-card    { padding: 12px 10px; }
+
+  .quotes blockquote { font-size: 13px; }
+  .cta             { padding: 32px 16px; }
+  .ai-section      { padding: 30px 16px 24px; }
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   ≤ 360 px  —  small Androids (Galaxy A32, Moto G)
+   ──────────────────────────────────────────────────────────────────────────── */
+@media (max-width: 360px) {
+
+  .shell { width: min(100% - 20px, 1160px); }
+
+  .hero h1 { font-size: 28px; letter-spacing: -0.07em; }
+
+  .hero-stage       { height: 182px; margin-top: 10px; }
+  .hero-stage .analytics    { scale: 0.56; right: 6px; top: 8px; }
+  .hero-stage .workflow-panel { scale: 0.54; left: 4px; top: 8px; }
+  .hero-stage .cloud-panel  { scale: 0.58; bottom: 6px; left: 4px; }
+
+  .hero-proof > div { padding: 12px 6px; }
+  .hero-proof strong { font-size: 14px; }
+
+  .section, .work  { padding: 42px 0; }
+  .testimonials    { padding: 42px 0 50px; }
+  .features        { padding: 0 0 42px; }
+  .process         { padding: 8px 0 42px; }
+
+  .section-heading h2,
+  .features h2,
+  .process h2      { font-size: 22px; }
+  .ai-content h2   { font-size: 24px; }
+  .cta h2          { font-size: 22px; }
+
+  .service-card    { padding: 11px 10px; column-gap: 10px; }
+  .service-icon    { width: 34px; height: 34px; font-size: 16px; border-radius: 9px; }
+  .service-card h3 { font-size: 12.5px; }
+  .service-card p  { font-size: 10.5px; }
+
+  .showcase        { height: 208px; }
+  .screen          { height: 126px; }
+  .screen-copy     { font-size: 14px; top: 30px; }
+
+  .feature-grid article { padding: 13px 11px; }
+  .feature-grid h3 { font-size: 11px; }
+
+  .quotes article  { padding: 16px 14px; }
+  .quotes blockquote { font-size: 12.5px; }
+
+  .cta             { padding: 30px 16px; gap: 18px; }
+  .ai-section      { padding: 28px 14px 22px; }
+  .ai-list span    { font-size: 10px; }
+
+  .timeline article { padding-bottom: 22px; gap: 13px; }
+  .timeline h3     { font-size: 12.5px; }
+  .timeline p      { font-size: 9.5px; }
+}
