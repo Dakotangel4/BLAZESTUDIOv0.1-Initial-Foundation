@@ -1,0 +1,88 @@
+Fix the Blaze Studio Logo Rendering (Do Not Redesign)
+
+The uploaded PNG is the official Blaze Studio logo.
+
+The current implementation is incorrect because the website is rendering the entire PNG canvas instead of the logo artwork.
+
+Your task
+
+Do not recreate, redraw, vectorize, or edit the logo.
+
+Instead, display only the actual logo at its proper visual size.
+
+Requirements
+Inspect the uploaded PNG.
+Detect the bounding box of the visible logo artwork.
+Trim all transparent padding surrounding the logo.
+Save a new asset:
+blaze-studio-logo-trimmed.png
+
+The trimmed image should contain only the logo, with only 2–4px of transparent breathing room.
+
+Then update the website
+
+Replace every logo reference with the trimmed version.
+
+The logo should appear:
+
+bold
+premium
+crisp
+properly sized
+centered vertically
+
+Do not scale the full canvas.
+
+Scale only the trimmed logo.
+
+Navbar
+
+Desktop:
+
+logo height: 46–52px
+
+Mobile:
+
+logo height: 38–44px
+
+Maintain aspect ratio.
+
+CSS
+
+Ensure the logo has:
+
+transparent background
+no border
+no box-shadow
+no background color
+no padding
+no clipping
+no object-fit distortion
+
+Use:
+
+display: block;
+height: auto;
+width: auto;
+max-height: 52px;
+background: transparent;
+Transparency QA
+
+Inspect the logo at 400% zoom.
+
+Verify:
+
+No white outline.
+No white halo.
+No white pixels inside the Blaze "B".
+The interior cut-outs of the "B" are fully transparent.
+The flame cut-out is transparent.
+The logo blends seamlessly over white, blue, dark navy, and gradient backgrounds.
+Final Acceptance Criteria
+The logo looks visually identical to the approved branding.
+It appears larger and bolder because the transparent padding has been removed.
+The logo is perfectly transparent on every page.
+No cropping of the artwork itself.
+No redesign whatsoever.
+
+If the uploaded PNG still contains white pixels inside the "B" or around the edges after trimming, report that explicitly instead of masking it with CSS. Do not fake transparency using blend modes or background colors.
