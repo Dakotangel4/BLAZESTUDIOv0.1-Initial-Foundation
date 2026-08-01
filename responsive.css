@@ -1,0 +1,308 @@
+/* responsive.css
+   Mobile-first responsive improvements for Blaze Studio
+   Breakpoints: 320 · 375 · 390 · 540 · 768 · 850 · 1024 · 1440
+   ─────────────────────────────────────────────────────────────
+   Covers: overflow, spacing, typography, navigation, buttons,
+   section layouts, hero, features, process, footer, about page.
+   No colour, branding, or content changes.
+*/
+
+/* ═══════════════════════════════════════════════════════
+   GLOBAL — prevent horizontal scroll site-wide
+═══════════════════════════════════════════════════════ */
+html { overflow-x: hidden; }
+
+/* ═══════════════════════════════════════════════════════
+   PERFORMANCE — GPU-composite reveal animations
+═══════════════════════════════════════════════════════ */
+.reveal { will-change: opacity, transform; }
+
+/* ═══════════════════════════════════════════════════════
+   ACCESSIBILITY — respect reduced-motion preference
+═══════════════════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════
+   NAV — positioning context & 44px touch target
+═══════════════════════════════════════════════════════ */
+header.nav {
+  /* Gives the absolute-positioned mobile dropdown a proper
+     anchor so it doesn't drift when the user scrolls. */
+  position: relative;
+}
+
+.menu {
+  min-width: 44px;
+  min-height: 44px;
+  display: none;         /* overridden at ≤850px */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0 8px;
+  border-radius: 8px;
+  line-height: 1;
+}
+
+/* ═══════════════════════════════════════════════════════
+   ≤ 1440px — wide desktop (fine-tune spacing)
+═══════════════════════════════════════════════════════ */
+@media (max-width: 1440px) {
+  .glow-one { right: -80px; }
+}
+
+/* ═══════════════════════════════════════════════════════
+   ≤ 1024px — small laptop / large tablet landscape
+═══════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  /* Services: 2-column avoids orphaned 1-card rows */
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .crypto { grid-column: auto; }
+
+  /* CTA heading: scale with viewport */
+  .cta h2 { font-size: clamp(34px, 4vw, 44px); }
+
+  /* Footer 5-column → 3-column already in footer.css;
+     ensure brand logo col spans full width */
+  .footer-brand { grid-column: 1 / -1; }
+}
+
+/* ═══════════════════════════════════════════════════════
+   ≤ 850px — tablet breakpoint
+═══════════════════════════════════════════════════════ */
+@media (max-width: 850px) {
+  /* Hamburger */
+  .menu { display: flex; }
+
+  /* ── Hero proof stats: 2 × 2 grid ── */
+  .hero-proof {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 0;
+    justify-items: start;
+  }
+  /* Remove all inherited flex borders/padding */
+  .hero-proof > div + div { border-left: none; padding-left: 0; }
+  /* Right column gets a left divider */
+  .hero-proof > div:nth-child(even) {
+    border-left: 1px solid #dce7f7;
+    padding-left: 20px;
+  }
+  /* Bottom row gets a top divider */
+  .hero-proof > div:nth-child(3),
+  .hero-proof > div:nth-child(4) {
+    border-top: 1px solid #dce7f7;
+    padding-top: 14px;
+  }
+
+  /* ── Section heading sizes: fluid ── */
+  .section-heading h2,
+  .features h2,
+  .process h2 { font-size: clamp(30px, 5.5vw, 44px); }
+  .ai-content h2 { font-size: clamp(32px, 5.5vw, 46px); }
+
+  /* ── AI section: hide right visual on narrow tablet ── */
+  .ai-visual { min-height: 220px; overflow: hidden; }
+
+  /* ── Showcase: scale for tablet ── */
+  .showcase { height: 380px; }
+}
+
+/* ═══════════════════════════════════════════════════════
+   ≤ 768px — portrait tablet
+═══════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  /* Reduce section vertical padding */
+  .section,
+  .work,
+  .testimonials { padding: 80px 0; }
+  .features { padding-bottom: 80px; }
+  .process { padding-bottom: 80px; }
+
+  /* Showcase: tighten */
+  .showcase { height: 330px; }
+  .laptop { width: 62%; left: 19%; top: 48px; }
+  .screen { height: 210px; }
+  .screen-copy { font-size: 26px; }
+}
+
+/* ═══════════════════════════════════════════════════════
+   ≤ 540px — phone (extends existing breakpoint)
+═══════════════════════════════════════════════════════ */
+@media (max-width: 540px) {
+  /* ── Hero ── */
+  /* Existing styles.css sets 51px — bring to fluid clamp */
+  .hero h1 { font-size: clamp(36px, 10vw, 50px); }
+
+  /* Action buttons: center-align & wrap cleanly */
+  .actions { justify-content: center; }
+  .button { white-space: nowrap; }
+
+  /* ── Section headings ── */
+  .section-heading h2,
+  .features h2,
+  .process h2 { font-size: clamp(26px, 8vw, 36px); }
+  .ai-content h2 { font-size: clamp(28px, 9vw, 40px); }
+  .cta h2 { font-size: clamp(26px, 8vw, 34px); }
+
+  /* ── Logo strip: clip overflow ── */
+  .logo-strip { overflow: hidden; }
+
+  /* ── CTA: stack content cleanly ── */
+  /* styles.css already switches to display:block at 540px;
+     extend with better button alignment */
+  .cta .button { display: inline-flex; }
+
+  /* ── Testimonials: no min-height (let content breathe) ── */
+  .quotes article { min-height: auto; }
+
+  /* ── Timeline: consistent gap ── */
+  .timeline { gap: 20px; }
+
+  /* ── Footer: soften column layout ── */
+  .footer-bottom { gap: 8px; }
+}
+
+/* ═══════════════════════════════════════════════════════
+   ≤ 390px — modern flagship phones (iPhone 14, Pixel 7)
+═══════════════════════════════════════════════════════ */
+@media (max-width: 390px) {
+  /* Tighter shell padding (from 32px to 24px) */
+  .shell { width: min(100% - 24px, 1160px); }
+
+  /* ── Nav dropdown: full viewport width ── */
+  #primary-nav {
+    left: 0;
+    right: 0;
+    border-radius: 0 0 12px 12px;
+  }
+
+  /* ── Hero ── */
+  .hero h1 { font-size: clamp(30px, 9.5vw, 40px); }
+  .hero-proof { gap: 10px 0; }
+  .hero-proof > div:nth-child(3),
+  .hero-proof > div:nth-child(4) { padding-top: 10px; }
+  .hero-proof strong { font-size: 15px; }
+
+  /* ── Features: 1-column ── */
+  .feature-grid { grid-template-columns: 1fr; }
+
+  /* ── Process timeline: 1-column ── */
+  .timeline {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .timeline::before { display: none; }
+
+  /* ── Section headings ── */
+  .section-heading h2,
+  .features h2,
+  .process h2 { font-size: clamp(24px, 8vw, 32px); }
+  .ai-content h2 { font-size: clamp(26px, 8.5vw, 34px); }
+  .cta h2 { font-size: clamp(24px, 8vw, 30px); }
+
+  /* ── About page: story pillars 1-column ── */
+  .story-pillars { grid-template-columns: 1fr; }
+
+  /* ── Showcase: no horizontal overflow ── */
+  .tablet { left: -2%; }
+  .project-phone { right: -2%; }
+}
+
+/* ═══════════════════════════════════════════════════════
+   ≤ 375px — iPhone SE, Galaxy A-series, standard phones
+═══════════════════════════════════════════════════════ */
+@media (max-width: 375px) {
+  /* ── Hero ── */
+  .hero h1 { font-size: 30px; }
+  .lead { font-size: 13.5px; }
+  .hero-desc { font-size: 12.5px; }
+
+  /* ── Section headings ── */
+  .section-heading h2,
+  .features h2,
+  .process h2 { font-size: 24px; }
+  .ai-content h2 { font-size: 28px; }
+  .cta h2 { font-size: 24px; }
+
+  /* ── CTA: tighter padding ── */
+  .cta { padding: 34px 22px; }
+
+  /* ── AI section: tighter padding ── */
+  .ai-section { padding: 38px 20px; }
+
+  /* ── Services: 1-column (cards breathe properly) ── */
+  .services-grid { grid-template-columns: 1fr; }
+
+  /* ── Logo strip: trim to 3 items max ── */
+  .logo-strip div:nth-of-type(n+4) { display: none; }
+
+  /* ── Testimonials ── */
+  .quotes blockquote { font-size: 13px; }
+  .quotes article { padding: 20px 16px; }
+
+  /* ── About hero: compact ── */
+  .about-hero { padding: 60px 0 40px; }
+
+  /* ── Why section on about page ── */
+  .why-section { padding: 44px 18px; }
+}
+
+/* ═══════════════════════════════════════════════════════
+   ≤ 320px — very small phones (iPhone SE 1st gen, etc.)
+═══════════════════════════════════════════════════════ */
+@media (max-width: 320px) {
+  /* Tightest shell */
+  .shell { width: min(100% - 20px, 1160px); }
+
+  /* ── Hero ── */
+  .hero h1 { font-size: 26px; }
+  .hero-desc { font-size: 12px; }
+  .hero-proof strong { font-size: 14px; }
+
+  /* ── Eyebrow labels ── */
+  .eyebrow { font-size: 9.5px; }
+
+  /* ── Section headings ── */
+  .section-heading h2,
+  .features h2,
+  .process h2 { font-size: 22px; }
+  .ai-content h2 { font-size: 24px; }
+  .cta h2 { font-size: 22px; }
+
+  /* ── Logo strip: 2 items max ── */
+  .logo-strip div:nth-of-type(n+3) { display: none; }
+  .logo-strip { gap: 12px; }
+
+  /* ── Testimonials ── */
+  .quotes blockquote { font-size: 12px; }
+  .quotes article { padding: 16px 12px; }
+
+  /* ── Nav ── */
+  .nav { height: 72px; }
+
+  /* ── Footer bottom: stack ── */
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+
+  /* ── Buttons: allow wrapping at smallest size ── */
+  .button { padding: 12px 14px; font-size: 12px; gap: 10px; }
+  .button b { font-size: 14px; }
+
+  /* ── CTA ── */
+  .cta { padding: 28px 18px; }
+
+  /* ── About page ── */
+  .about-hero { padding: 50px 0 32px; }
+  .why-section { padding: 36px 14px; }
+}

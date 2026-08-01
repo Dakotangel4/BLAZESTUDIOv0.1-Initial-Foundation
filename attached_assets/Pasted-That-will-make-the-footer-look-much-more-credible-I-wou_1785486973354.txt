@@ -1,0 +1,113 @@
+That will make the footer look much more credible. I would also avoid putting every detail in the footer itself—keep it clean and let the About page carry the full company information.
+
+Here's a footer structure I'd use for Blaze Studio:
+
+---
+
+### Company
+
+* About Us
+* Our Services
+* Portfolio
+* Contact
+
+### Services
+
+* Website Development
+* Mobile App Development
+* UI/UX Design
+* Graphic Design
+* AI Automation
+* Digital Marketing
+* Crypto Buy & Sell
+
+### Contact
+
+**Blaze Studio**
+
+J&F Plaza, Opp. Otokutu Market
+Otokutu, Delta State, Nigeria
+
+📧 [hello@blazestudio.com.ng](mailto:hello@blazestudio.com.ng)
+
+📞 +234 913 098 6279
+
+🌐 [www.blazestudio.com.ng](http://www.blazestudio.com.ng)
+
+### Follow Us
+
+* Facebook
+* Instagram
+* X (Twitter)
+* LinkedIn
+* WhatsApp
+
+---
+
+### Bottom Bar
+
+```
+© 2026 Blaze Studio. All rights reserved.
+
+Build. Design. Automate.
+```
+
+And for the new **About** page, I'd include:
+
+## Hero
+
+**Building Digital Experiences That Drive Growth**
+
+Blaze Studio is a premium digital agency focused on building high-performance websites, mobile applications, AI-powered solutions, branding, and digital products that help businesses grow with confidence.
+
+---
+
+## Our Story
+
+Blaze Studio was founded with a simple mission: create world-class digital products that combine exceptional design, cutting-edge technology, and business strategy. We partner with startups, entrepreneurs, and established businesses to transform ideas into impactful digital experiences.
+
+---
+
+## Our Mission
+
+To empower businesses with innovative digital solutions that are fast, scalable, secure, and built for long-term success.
+
+---
+
+## Our Vision
+
+To become one of Africa's leading digital technology studios, recognized globally for creativity, innovation, and excellence.
+
+---
+
+## Our Office
+
+**Blaze Studio**
+
+J&F Plaza
+Opp. Otokutu Market
+Otokutu, Delta State
+Nigeria
+
+---
+
+## Why Clients Choose Us
+
+* Premium Design
+* Fast Delivery
+* AI-Powered Solutions
+* Secure Development
+* Dedicated Support
+* Transparent Communication
+
+---
+
+## CTA
+
+**Ready to Build Something Amazing?**
+
+Start Your Project
+
+---
+
+This gives Blaze Studio the feel of an established software company rather than a freelancer portfolio, and having a dedicated office section with your physical address adds trust for prospective clients.

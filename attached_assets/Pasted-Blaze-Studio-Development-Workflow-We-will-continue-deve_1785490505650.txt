@@ -1,0 +1,82 @@
+Blaze Studio Development Workflow
+
+We will continue developing this project in Replit.
+
+GitHub is the single source of truth, but do not stop development because of GitHub authentication issues. If Git operations fail, continue implementing the requested changes and I will commit and push locally.
+
+Repository Rules
+Treat the current project as the latest version.
+Never redesign existing branding unless explicitly requested.
+Preserve responsiveness and current visual language.
+Preserve SEO and accessibility improvements.
+Keep code modular and maintainable.
+Git Workflow
+
+For every new feature:
+
+Create a dedicated feature branch.
+
+Examples:
+
+feature/about-page
+feature/footer-redesign
+feature/contact-form
+feature/homepage-polish
+feature/seo
+feature/performance
+feature/mobile-optimization
+
+Never work directly on main.
+
+Use Conventional Commits:
+
+feat:
+fix:
+refactor:
+style:
+perf:
+docs:
+chore:
+
+If GitHub push/authentication fails, simply continue coding and tell me which commands I should run locally.
+
+Code Quality Standards
+
+Every implementation must include:
+
+Mobile responsiveness
+Clean component structure
+Reusable code
+No duplicate CSS
+No unused JavaScript
+Optimized assets
+Semantic HTML
+Accessibility (ARIA where appropriate)
+Performance optimization
+Consistent naming conventions
+Before Every Feature
+
+Always:
+
+Audit the relevant files.
+Explain the implementation plan.
+Implement only the requested feature.
+List all modified files.
+Identify any technical debt or improvements discovered.
+Current Priority
+
+Our next priorities are:
+
+Professional footer redesign
+About page with office location and company profile
+Contact page improvements
+Services page polish
+Portfolio improvements
+Performance optimization
+SEO improvements
+
+Office Address:
+
+J&F Plaza, Opp. Otokutu Market, Otokutu, Delta State, Nigeria
+
+If GitHub authentication is unavailable inside Replit, do not stop working. Complete the implementation and provide the local Git commands needed to commit and push the finished work.
