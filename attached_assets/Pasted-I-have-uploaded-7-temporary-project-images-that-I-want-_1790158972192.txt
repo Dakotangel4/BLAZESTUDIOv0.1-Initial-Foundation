@@ -1,0 +1,181 @@
+I have uploaded 7 temporary project images that I want to use as placeholders for the Blaze Studio portfolio.
+
+Build a polished **“Selected Projects” / “Our Work” portfolio section** on the existing Blaze Studio website using these 7 uploaded images.
+
+IMPORTANT:
+
+* These 7 images are temporary placeholders.
+* I will replace them with my actual project screenshots later.
+* Build the portfolio so replacing the images is simple and does NOT require changing the layout or component structure.
+* Do not redesign the existing Blaze Studio website.
+* Preserve the current design system, colors, typography, navigation, header, footer, spacing system, responsiveness, and existing sections.
+* Do not modify unrelated functionality.
+
+### Portfolio layout
+
+Create a responsive project grid containing exactly 7 project cards.
+
+Each project card should contain:
+
+1. Large project image/thumbnail
+2. Project name
+3. Short project description
+4. Project category
+5. “View Website ↗” button
+
+Example structure:
+
+Project Name
+Website Development
+Short description about the project.
+
+[ View Website ↗ ]
+
+### Temporary project content
+
+Use realistic placeholder information for now.
+
+Project 01
+Business Website
+A modern responsive website designed to establish a professional online presence.
+
+Project 02
+E-commerce Website
+A clean online shopping experience designed around products and customer conversion.
+
+Project 03
+Business Landing Page
+A focused landing page designed to communicate a business offering clearly.
+
+Project 04
+Mobile App
+A custom mobile interface designed around a simple and intuitive user experience.
+
+Project 05
+Brand Website
+A modern digital presence combining strong visual identity with responsive web design.
+
+Project 06
+Dashboard UI
+A clean interface designed to make complex information easier to understand and manage.
+
+Project 07
+Digital Platform
+A responsive digital platform designed around usability, accessibility, and performance.
+
+### Image handling
+
+Use the 7 uploaded images as the project images.
+
+Keep the image references/data organized so that later I can replace each image individually without rebuilding the component.
+
+Do NOT:
+
+* crop the images aggressively
+* distort their aspect ratio
+* stretch them
+* add unnecessary filters
+* add fake device frames
+* add watermarks
+* modify the actual images
+
+Use an appropriate aspect-ratio container and object-fit behavior so the images look clean and consistent.
+
+### Links
+
+For now, use placeholder links for “View Website ↗”.
+
+Make the URL for each project easy to replace later.
+
+For example, keep project data structured similarly to:
+
+project:
+
+* image
+* title
+* category
+* description
+* url
+
+Do not hard-code the same URL for every project.
+
+When I replace the placeholder projects later, I should only need to update the project data/images/URLs.
+
+### Interaction
+
+On desktop:
+
+* Clean multi-column project grid.
+* Cards should have consistent heights.
+* Image should be the visual focus.
+* Subtle hover interaction.
+* Do not make the animation excessive.
+
+On mobile:
+
+* Stack projects cleanly.
+* Images remain properly proportioned.
+* Text remains readable.
+* Buttons remain easy to tap.
+* No horizontal overflow.
+
+### Portfolio section heading
+
+Use:
+
+Selected Projects
+
+Supporting text:
+
+A selection of digital products, websites, and experiences we've designed and built.
+
+Keep the copy professional and concise.
+
+### Visual direction
+
+The section should feel like a **professional digital studio portfolio**, not a generic template.
+
+Use the existing Blaze Studio visual language:
+
+* dark/white/blue visual system already present
+* clean spacing
+* strong typography
+* modern cards
+* subtle borders/shadows where they already fit the design
+* restrained animations
+
+Do not introduce a completely new visual style.
+
+### Future replacement requirement
+
+This is important:
+
+I should later be able to replace the 7 temporary images with my real project screenshots simply by replacing the image files or updating their paths.
+
+Make the project data clearly organized in one location/component so the following can easily be changed:
+
+* image
+* project name
+* category
+* description
+* live website URL
+
+Do not scatter these values throughout multiple components.
+
+### QA
+
+After implementing:
+
+1. Confirm all 7 uploaded images appear.
+2. Confirm there are exactly 7 project cards.
+3. Check desktop layout.
+4. Check mobile layout.
+5. Check image aspect ratios.
+6. Check hover states.
+7. Check that all buttons work with their placeholder URLs.
+8. Confirm there is no horizontal overflow.
+9. Confirm there are no console errors.
+10. Confirm existing Blaze Studio sections and functionality remain unchanged.
+
+Only make changes necessary for this portfolio implementation.
+Do not modify unrelated files or features.

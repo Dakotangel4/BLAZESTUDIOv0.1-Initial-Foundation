@@ -316,3 +316,8 @@ header.nav {
   .about-hero { padding: 50px 0 32px; }
   .why-section { padding: 36px 14px; }
 }
+
+/* Longer service descriptions need additional room on desktop. */
+@media (min-width: 851px) {
+  .service-card { min-height: 280px; }
+}
