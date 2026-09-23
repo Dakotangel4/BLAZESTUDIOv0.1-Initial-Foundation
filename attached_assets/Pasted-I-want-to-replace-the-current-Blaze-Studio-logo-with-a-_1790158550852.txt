@@ -1,0 +1,55 @@
+I want to replace the current Blaze Studio logo with a new logo image that I will upload.
+
+Implement this carefully:
+
+### Logo background removal
+
+The uploaded logo currently has a solid white background, while the website header/navigation uses a gradient background.
+
+Remove ONLY the white background from the uploaded logo and make those background pixels transparent.
+
+Requirements:
+
+* Preserve the original Blaze Studio logo exactly.
+* Do not redesign, redraw, recolor, sharpen, stylize, or alter the logo.
+* Do not change the logo's proportions.
+* Do not crop any part of the actual logo.
+* Preserve smooth/anti-aliased edges.
+* Make the surrounding white area transparent so the website's gradient shows through naturally.
+* If the logo contains intentional white elements that are part of the actual logo, DO NOT remove those white logo elements.
+* The final asset should be a transparent PNG/WebP suitable for use over the existing gradient background.
+* Do not use CSS tricks such as `mix-blend-mode`, opacity, filters, or background removal hacks as a substitute for actually making the image background transparent.
+* Prefer processing the asset itself and saving a clean transparent version in the project's existing public/assets directory.
+* Keep the original uploaded file untouched as a backup.
+
+### Header implementation
+
+Replace the existing broken/missing logo asset with the cleaned transparent logo.
+
+Keep the existing:
+
+* Header layout
+* Navigation
+* Header height
+* Gradient background
+* Logo positioning
+* Responsive behavior
+
+Only adjust the logo dimensions/spacing if necessary to make the new asset visually fit the existing header.
+
+### Quality check
+
+After implementation:
+
+1. Check the logo against the desktop gradient header.
+2. Check it against the mobile header.
+3. Confirm there is no visible white rectangular box around it.
+4. Confirm the actual white portions of the logo remain intact if they are intentional logo elements.
+5. Confirm the logo is sharp at normal display size.
+6. Confirm there is no excessive transparent padding around the logo.
+7. Confirm there are no console errors or broken asset references.
+8. Confirm the rest of the website remains unchanged.
+
+Do not commit unrelated changes.
+
+I will upload the new logo image for you to use.
