@@ -1,1 +1,2 @@
 - [Blaze Studio Development Workflow](blaze-studio-workflow.md) — mandatory branch→audit→implement→commit→PR cycle; never work on main, never auto-merge.
+- [Logo Background Removal](logo-background-removal.md) — use edge-connected alpha flood-fill and trim for uploaded logo backgrounds; preserve enclosed pixels.
