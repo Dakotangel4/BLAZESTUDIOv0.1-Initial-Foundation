@@ -1,0 +1,330 @@
+Update the existing Blaze Studio website to add/rework a professional **About** page using the exact copy provided below.
+
+IMPORTANT:
+
+* Do NOT redesign the entire website.
+* Do NOT change the existing global branding, navigation, footer, typography system, color system, or unrelated pages unless absolutely necessary.
+* Preserve all existing functionality.
+* Follow the existing project's architecture, components, routing, styling conventions, and responsive behavior.
+* First inspect the current codebase and identify the existing page structure, reusable components, design system, routes, and asset conventions.
+* Reuse existing components wherever possible rather than creating unnecessary duplicates.
+* The result should feel like a polished international digital studio website, not a generic agency template.
+
+## PAGE GOAL
+
+The About page should establish three things quickly:
+
+1. What Blaze Studio is.
+2. Who founded it.
+3. Why a potential international client can trust the studio enough to start a conversation.
+
+The page should feel confident and professional without exaggerating the size, experience, client count, or capabilities of the company.
+
+Do NOT invent:
+
+* Clients
+* Testimonials
+* Awards
+* Years of experience
+* Team members
+* Offices
+* Revenue
+* Partnerships
+* Certifications
+* Statistics
+* Case studies
+
+## PAGE STRUCTURE
+
+Build the page in this order:
+
+### 1. Hero
+
+Eyebrow:
+ABOUT BLAZE STUDIO
+
+Headline:
+We build digital products that help businesses move forward.
+
+Supporting text:
+Blaze Studio is a digital studio founded by Akpomovine Jerrison, focused on helping businesses turn ideas, services, and brands into practical digital experiences.
+
+Primary CTA:
+Start a Project
+
+Secondary CTA:
+View Our Work
+
+The hero should have strong visual hierarchy and enough whitespace. Avoid excessive animations.
+
+### 2. Introduction / Philosophy
+
+Heading:
+Built with purpose. Designed to work.
+
+Copy:
+
+We believe good digital work should do more than look professional.
+
+It should make a business easier to discover, easier to understand, easier to trust, and easier to interact with.
+
+That's why our approach combines design, technology, and business thinking rather than treating them as separate pieces.
+
+Display the process visually:
+
+UNDERSTAND → DESIGN → BUILD → IMPROVE
+
+Use the site's existing visual language rather than creating an unrelated style.
+
+### 3. What We Do
+
+Heading:
+What we do
+
+Create five service cards:
+
+Websites
+Professional websites designed around your business, services, customers, and goals.
+
+Web & Mobile Applications
+Custom digital products built to solve specific business problems and workflows.
+
+UI/UX Design
+Clean, intuitive interfaces that make digital products easier and more enjoyable to use.
+
+Automation & AI
+Practical automation and AI solutions that reduce repetitive work and improve business processes.
+
+Brand & Digital Design
+Visual systems and digital assets that give businesses a consistent and professional presence.
+
+Keep these cards concise and visually consistent with the existing site.
+
+### 4. Founder Section
+
+This section is important because Blaze Studio is founder-led.
+
+Heading:
+Meet the Founder
+
+Name:
+Akpomovine Jerrison
+
+Role:
+Founder, Blaze Studio
+
+Copy:
+
+Blaze Studio was founded by Akpomovine Jerrison with a simple idea: businesses should be able to access good digital products without unnecessary complexity.
+
+Jerrison works across web development, product design, automation, and digital technology, working directly with clients to understand their needs and turn them into practical solutions.
+
+As a founder-led studio, Blaze Studio keeps the process direct. Clients communicate with the person responsible for understanding the project, shaping the solution, and making sure the final product delivers what was intended.
+
+IMPORTANT:
+Create a clean professional founder-photo area.
+
+If an existing founder image/avatar exists in the project, reuse it.
+
+If no suitable image exists, create a clearly marked image placeholder using the existing design system rather than inventing a photograph.
+
+Do not use a stock "CEO" photograph.
+
+The founder section should feel personal and credible, not corporate.
+
+### 5. International Clients
+
+Heading:
+Built for businesses, wherever they are.
+
+Copy:
+
+Blaze Studio is based in Nigeria and works with businesses and individuals internationally.
+
+We work remotely, communicate directly with our clients, and use modern digital tools to deliver projects regardless of location.
+
+Do not overemphasize Nigeria. It should simply establish where the studio is based while making international work feel natural.
+
+### 6. Closing CTA
+
+Heading:
+Let's build something useful.
+
+Copy:
+
+If you have a business that needs a better digital presence—or an idea that needs to become a working product—we'd like to hear from you.
+
+Button:
+Start a Project
+
+## DESIGN DIRECTION
+
+Use the existing Blaze Studio visual identity.
+
+The current brand direction is:
+
+* Primary blue: #1E6BFF
+* Dark: #0B1220
+* White: #FFFFFF
+* Accent cyan: #4CC9F0
+
+Do not blindly apply these colors if the existing implementation already has a properly configured theme/token system. Use the existing variables/tokens.
+
+Design characteristics:
+
+* Premium
+* Minimal
+* Modern
+* Founder-led
+* International
+* Technology-focused
+* Strong typography
+* Generous whitespace
+* Clear hierarchy
+* Subtle motion only where useful
+
+Avoid:
+
+* Excessive gradients
+* Excessive glassmorphism
+* Generic SaaS illustrations
+* Fake statistics
+* Fake testimonials
+* Stock business people
+* Excessive animated text
+* Overcrowded sections
+* Huge blocks of text
+* Generic "we are passionate" agency language
+
+## RESPONSIVENESS
+
+The page must work cleanly on:
+
+* Desktop
+* Laptop
+* Tablet
+* Mobile
+
+Pay particular attention to:
+
+* Founder section on mobile
+* Service cards
+* Hero spacing
+* CTA buttons
+* Typography scaling
+* Navigation
+* Image aspect ratios
+* Horizontal overflow
+
+There must be no horizontal scrolling on mobile.
+
+## SEO
+
+Add appropriate page metadata:
+
+Title:
+About Blaze Studio | Digital Studio for Websites, Apps & Automation
+
+Description:
+Learn about Blaze Studio, a founder-led digital studio building websites, applications, digital experiences, and automation solutions for businesses internationally.
+
+Use a single H1:
+We build digital products that help businesses move forward.
+
+Use logical H2 headings for the major sections.
+
+Add appropriate semantic structure and accessible labels.
+
+If the project already has an SEO system, integrate with it rather than creating a second system.
+
+## ROUTING
+
+Add the About page to the existing routing system using the project's established conventions.
+
+If an About route already exists, update it instead of creating a duplicate route.
+
+Ensure the main website navigation contains an About link if one does not already exist.
+
+Ensure all CTA buttons point to the appropriate existing contact/project-start route.
+
+## FINAL QUALITY CHECK
+
+After implementation:
+
+1. Run the application.
+2. Check the About page on desktop.
+3. Check it on mobile.
+4. Verify all links work.
+5. Verify there are no console errors.
+6. Verify there are no broken images.
+7. Verify existing pages still work.
+8. Verify the page uses the existing Blaze Studio design system.
+9. Verify no placeholder lorem ipsum remains.
+10. Verify no unsupported claims or invented business information were added.
+
+Do not modify unrelated functionality.
+
+## EXACT PAGE COPY
+
+Use the following copy exactly unless a small grammatical adjustment is required by the existing UI:
+
+ABOUT BLAZE STUDIO
+
+We build digital products that help businesses move forward.
+
+Blaze Studio is a digital studio founded by Akpomovine Jerrison, focused on helping businesses turn ideas, services, and brands into practical digital experiences.
+
+We design and build websites, applications, digital interfaces, and automated solutions that are made to be useful—not just visually impressive.
+
+Whether a business needs its first professional website, a better digital presence, a custom application, or a smarter way to handle repetitive work, we focus on understanding the problem first and building the right solution around it.
+
+Built with purpose. Designed to work.
+
+We believe good digital work should do more than look professional.
+
+It should make a business easier to discover, easier to understand, easier to trust, and easier to interact with.
+
+That's why our approach combines design, technology, and business thinking rather than treating them as separate pieces.
+
+We keep things practical:
+
+Understand → Design → Build → Improve
+
+What we do
+
+Websites
+Professional websites designed around your business, services, customers, and goals.
+
+Web & Mobile Applications
+Custom digital products built to solve specific business problems and workflows.
+
+UI/UX Design
+Clean, intuitive interfaces that make digital products easier and more enjoyable to use.
+
+Automation & AI
+Practical automation and AI solutions that reduce repetitive work and improve business processes.
+
+Brand & Digital Design
+Visual systems and digital assets that give businesses a consistent and professional presence.
+
+Meet the Founder
+
+Akpomovine Jerrison
+
+Founder, Blaze Studio
+
+Blaze Studio was founded by Akpomovine Jerrison with a simple idea: businesses should be able to access good digital products without unnecessary complexity.
+
+Jerrison works across web development, product design, automation, and digital technology, working directly with clients to understand their needs and turn them into practical solutions.
+
+As a founder-led studio, Blaze Studio keeps the process direct. Clients communicate with the person responsible for understanding the project, shaping the solution, and making sure the final product delivers what was intended.
+
+Built for businesses, wherever they are.
+
+Blaze Studio is based in Nigeria and works with businesses and individuals internationally.
+
+We work remotely, communicate directly with our clients, and use modern digital tools to deliver projects regardless of location.
+
+Let's build something useful.
+
+If you have a business that needs a better digital presence—or an idea that needs to become a working product—we'd like to hear from you.
