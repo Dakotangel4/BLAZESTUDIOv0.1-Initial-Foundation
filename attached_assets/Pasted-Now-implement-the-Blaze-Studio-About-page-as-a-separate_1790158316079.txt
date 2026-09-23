@@ -1,0 +1,275 @@
+Now implement the Blaze Studio About page as a separate, focused change.
+
+IMPORTANT:
+
+* Do not modify the services section that was just completed.
+* Do not undo or alter the existing service-card sizing/spacing fix.
+* Do not redesign the homepage.
+* Do not modify unrelated components or pages.
+* First inspect the existing codebase and reuse its current components, typography, spacing, responsive system, navigation, footer, buttons, and visual language.
+* Follow the existing routing architecture.
+* If an About page/route already exists, update it rather than creating a duplicate.
+* If there is no About route, create one using the project's established routing conventions.
+
+## OBJECTIVE
+
+Create a polished, founder-led About page for Blaze Studio.
+
+The purpose of the page is to establish:
+
+1. What Blaze Studio is.
+2. Who founded it.
+3. What the studio does.
+4. That the studio is based in Nigeria and works internationally.
+5. That there is a real person behind the business.
+
+The page should feel like a credible international digital studio—not a large agency pretending to have a large team.
+
+Do not invent:
+
+* Clients
+* Testimonials
+* Awards
+* Years of experience
+* Team members
+* Statistics
+* Partnerships
+* Offices
+* Certifications
+* Revenue
+* Case studies
+
+## PAGE STRUCTURE
+
+### HERO
+
+Eyebrow:
+ABOUT BLAZE STUDIO
+
+H1:
+We build digital products that help businesses move forward.
+
+Body:
+Blaze Studio is a digital studio founded by Akpomovine Jerrison, focused on helping businesses turn ideas, services, and brands into practical digital experiences.
+
+CTA:
+Start a Project
+
+Secondary CTA:
+View Our Work
+
+---
+
+### INTRODUCTION
+
+H2:
+Built with purpose. Designed to work.
+
+Body:
+
+We believe good digital work should do more than look professional.
+
+It should make a business easier to discover, easier to understand, easier to trust, and easier to interact with.
+
+That's why our approach combines design, technology, and business thinking rather than treating them as separate pieces.
+
+Display:
+
+UNDERSTAND → DESIGN → BUILD → IMPROVE
+
+---
+
+### SERVICES
+
+H2:
+What We Do
+
+Use the existing Blaze Studio services and keep the wording consistent with the current Services section.
+
+Services:
+
+Website Development
+Professional, responsive websites built to establish your online presence and help customers find, understand, and engage with your business.
+
+Mobile App Development
+Custom mobile applications designed around your business requirements, customers, and workflows.
+
+UI/UX Design
+Clean, intuitive interfaces and user experiences designed to make digital products easier to use and more effective.
+
+Graphic Design
+Professional visual designs for businesses, brands, campaigns, marketing materials, and digital platforms.
+
+AI Automation
+Practical AI and automation solutions that help businesses reduce repetitive work, streamline processes, and operate more efficiently.
+
+Digital Marketing
+Digital marketing solutions that help businesses build their online presence, reach their target audience, and generate opportunities.
+
+Crypto Buy & Sell
+Crypto buying and selling services designed to provide a straightforward way to access and transact with digital assets.
+
+Custom Prints
+Custom-printed products including caps, mugs, and T-shirts, produced for businesses, brands, events, and personal projects.
+
+IMPORTANT:
+Do not create a second completely different service-card design if an existing reusable service-card component can be reused.
+
+---
+
+### FOUNDER
+
+H2:
+Meet the Founder
+
+Name:
+Akpomovine Jerrison
+
+Role:
+Founder, Blaze Studio
+
+Body:
+
+Blaze Studio was founded by Akpomovine Jerrison with a simple idea: businesses should be able to access good digital products without unnecessary complexity.
+
+Jerrison works across web development, product design, automation, and digital technology, working directly with clients to understand their needs and turn them into practical solutions.
+
+As a founder-led studio, Blaze Studio keeps the process direct. Clients communicate with the person responsible for understanding the project, shaping the solution, and making sure the final product delivers what was intended.
+
+### FOUNDER IMAGE
+
+If a genuine founder photograph already exists in the project, use it.
+
+If no suitable founder photograph exists:
+
+* Do NOT use a random stock CEO image.
+* Do NOT generate a fake person.
+* Create a clean image placeholder that can easily be replaced later.
+* Keep the placeholder visually consistent with the site.
+
+Make the founder section feel human and credible without becoming overly personal.
+
+---
+
+### INTERNATIONAL SECTION
+
+H2:
+Built for businesses, wherever they are.
+
+Body:
+
+Blaze Studio is based in Nigeria and works with businesses and individuals internationally.
+
+We work remotely, communicate directly with our clients, and use modern digital tools to deliver projects regardless of location.
+
+Keep this section concise.
+
+---
+
+### FINAL CTA
+
+H2:
+Let's build something useful.
+
+Body:
+
+If you have a business that needs a better digital presence—or an idea that needs to become a working product—we'd like to hear from you.
+
+Button:
+Start a Project
+
+## DESIGN
+
+Use the existing Blaze Studio visual system.
+
+Existing brand direction:
+
+* #1E6BFF
+* #0B1220
+* #FFFFFF
+* #4CC9F0
+
+Use existing design tokens/variables if available instead of hardcoding duplicate values.
+
+Style:
+
+* Premium
+* Clean
+* Modern
+* Minimal
+* Founder-led
+* Technology-focused
+* International
+
+Avoid:
+
+* Excessive animations
+* Excessive gradients
+* Generic SaaS illustrations
+* Stock corporate photography
+* Fake statistics
+* Fake testimonials
+* Excessive glassmorphism
+* Large walls of text
+
+## RESPONSIVE BEHAVIOR
+
+The page must work properly on:
+
+* Desktop
+* Laptop
+* Tablet
+* Mobile
+
+Check specifically:
+
+* Hero spacing
+* Service cards
+* Founder image/content layout
+* CTA buttons
+* Typography scaling
+* Mobile stacking
+* No horizontal overflow
+
+## SEO
+
+Page title:
+
+About Blaze Studio | Digital Studio for Websites, Apps & Automation
+
+Meta description:
+
+Learn about Blaze Studio, a founder-led digital studio building websites, applications, digital experiences, and automation solutions for businesses internationally.
+
+Use one H1 only.
+
+Use semantic H2 headings for major sections.
+
+Integrate with the existing SEO implementation if one exists.
+
+## NAVIGATION
+
+Make sure the main navigation contains:
+
+About
+
+If the navigation already contains an About link, do not duplicate it.
+
+## FINAL QA
+
+After implementation:
+
+1. Start the application.
+2. Open the About page.
+3. Check desktop rendering.
+4. Check mobile rendering.
+5. Check all CTA links.
+6. Check navigation.
+7. Check for console errors.
+8. Check for broken images.
+9. Confirm the existing homepage remains unchanged.
+10. Confirm the services section remains unchanged.
+11. Confirm the existing service-card height/spacing fix is still intact.
+12. Do not commit unrelated changes.
+
+Keep this as a focused About-page implementation.
